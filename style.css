@@ -1,48 +1,202 @@
 * {
-     padding: 0;
-     margin: 0;
-     box-sizing: border-box;
-     font-family: 'gilroy';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-html, body {
-     height: 100%;
-     width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-.nav{
-    height: 10vw;
-    max-height: 20vh;
+@media (max-width: 600px) {
+  .part-1 h1 {
+    font-size: 1rem;
+  }
+}
+#main {
+  padding: 2vw;
+  width: 100%;
+}
+.part-1 {
+  width: 100%;
+  height: 190vh;
+  position: relative;
+  overflow: hidden;
+}
+.part-1 img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.6;
+  z-index: 0;
+  filter: brightness(58%) contrast(1);
+}
+.part-1 h1 {
+  position: absolute;
+  top: 40%;
+  width: 67%;
+  font-size: 6rem;
+  line-height: 0.85;
+  color: #f9eedb;
+  z-index: 1;
+}
+
+.nav {
+  height: 10vw;
+  max-height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.4vw;
+  position: fixed;
+}
+.l-nav img {
+  height: 3rem;
+}
+.r-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4vw;
+}
+.r-nav .button {
+  padding: 0.8rem 2rem;
+  border-radius: 1.6rem;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3vw;
+}
+.r-nav a {
+  text-decoration: none;
+}
+.r-nav h4 {
+  color: black;
+}
+.r-nav .button img {
+  height: 1.6rem;
+  margin: auto;
+}
+.services {
+  height: 200vh;
+  width: 100%;
+}
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.service-offered {
+  height: 100vh;
+  width: 30vw;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.service-offered img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.color-filling-text {
+  height: auto;
+  width: 100%;
+  color: #f9eedb;
+  padding-top: 8vw;
+  padding: 3vw;
+}
+.color-filling-text h3 {
+  font-size: 5vw;
+  width: 70%;
+  text-align: start;
+  margin-left: 30%;
+}
+span {
+  display: inline-block;
+}
+.news-hype {
+  height: 300vh;
+  width: 100%;
+  background-color: lightseagreen;
+}
+.clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.clients img {
+  height: 14rem;
+  width: 14rem;
+}
+.news-hype-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2vw;
+  overflow: hidden;
+}
+
+.news-hype-content img {
+  object-fit: cover;
+  height: 18rem;
+  width: 18rem;
+}
+.news-hype-content {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 2rem;
+}
+.wall-of-quote {
+  height: 300vh;
+  width: 100%;
+}
+.wall-of-quote img {
+  width: 100%;
+}
+.wall-of-quote h1 {
+  font-size: 8.3rem;
+  line-height: 0.8;
+}
+.work-with-us {
+  height: 200vh;
+  width: 100%;
+  background-color: lightgray;
+}
+.work-with-us img {
+  width: 100%;
+}
+
+.certifications {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.certifications img {
+  height: 8rem;
+}
+.wrap-div-of-pages{
+    height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;justify-content: space-between;
-    background-color: red;
-    padding-left: 2.4vw;
-    position: fixed;
+    background-color: gray;
 }
-.l-nav img{
-    height: 3rem;
+.footer {
+  border-top: 3px solid #f9eedb;
+  border-bottom: 3px solid #f9eedb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.r-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2.4vw;
-}
-.r-nav .button{
-    padding: .8rem 2rem;
-    border-radius: 1.6rem;
-    border: 2px solid black;
-    display: flex;align-items: center;justify-content: center;
-    gap: .3vw;
-}
-.r-nav a{
-    text-decoration: none
-}
-.r-nav h4{
-    color: black;
-}
-.r-nav .button img{
-    height: 1.6rem;
-    margin: auto;
-    
+
+.footer img {
+  width: 18rem;
+  height: 14rem;
 }
