@@ -8,11 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="main">
+    <div data-scroll id="main">
       <div class="part-1">
         <!-- <div class="nav">
             <div class="l-nav">
@@ -28,51 +28,61 @@
                 <div class="menu"></div>
             </div>
         </div> -->
-        <img
+        <img data-scroll data-scroll-speed="-4"
           src="https://renystudio.com/wp-content/uploads/2022/10/443582u48927u348923.jpg"
           alt="img"
         />
-        <h1>WE BRING TOGETHER STRATEGY & DESIGN FOR PURPOSE LED BRANDS</h1>
+        <h1 data-scroll data-scroll-speed="1">WE BRING TOGETHER STRATEGY & DESIGN FOR PURPOSE LED BRANDS</h1>
       </div>
       <div class="services">
         <div class="services-container"></div>
       </div>
 
-      <div class="color-filling-text">
-        <h3>
-          We are an independent, B-Corp Certified, purpose-led design studio
-          based in Sydney. We are in the business of creative exploration,
-          designing transformation for organisations & brands focused on
-          creating better outcomes for humanity.
+      <div data-scroll class="color-filling-text">
+        <img id="movingImg" data-scroll  data-scroll-speed="5" src="https://renystudio.com/wp-content/uploads/2023/12/RENY-STUDIO-x-B-CORP.png" alt="">
+        <h3>We are an independent, B-Corp Certified, purpose-led design studio based in Sydney. We are in the business of creative exploration, designing transformation for organisations & brands focused on
+ creating better outcomes for humanity.
         </h3>
       </div>
       <div class="news-hype">
-        <div class="news-hype-container"></div>
-        <div class="clients"></div>
-      </div>
+        <div class="nav-news-hype">
+          <h1>News & Hype</h1>
+          <h4>View All</h4>
+        </div>
+        <div class="news-hype-container">
 
-      <div class="wall-of-quote">
-        <img
+        </div>
+        <div data-scroll class="clients"></div>
+        <div   class="wall-of-quote">
+        <img data-scroll data-scroll-speed="-2"
           src="https://renystudio.com/wp-content/uploads/2022/10/renyq384y18932y81923.jpg"
           alt=""
         />
-        <div class="text">
-          <h1>
+      </div>
+        <!-- <div data-scroll data-scroll-speed="-1"  class="text"> -->
+          <h1 class="text" data-scroll data-scroll-speed="4">
             TOGETHER WITH OUR PARTNERS, WE PUSH THE BOUNDARIES OF WHAT IS
             POSSIBLE WITH DESIGN.
           </h1>
+        <!-- </div> -->
+        <div class="moving-strip">
+          Moving strip
         </div>
-        <div class="moving-strip"></div>
+     
       </div>
+
+      
 
       <div class="work-with-us">
         <div class="imgWWU">
-          <img
+          <img data-scroll data-scroll-speed="-2"
             src="https://renystudio.com/wp-content/uploads/2021/11/3e723978239reny.jpg"
             alt=""
           />
-          <h3>RENY® HELPS DIGITAL FIRST BRANDS RE-DESIGN THE FUTURE.</h3>
+          <div id="button-wrap">
+            <h3>RENY® HELPS DIGITAL FIRST BRANDS RE-DESIGN THE FUTURE.</h3>
           <button>Work with us</button>
+          </div>
         </div>
       </div>
       <div class="changingTextDiv">

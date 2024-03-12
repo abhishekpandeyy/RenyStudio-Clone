@@ -1,3 +1,51 @@
+//red ,orange , purpe-green and uske neeche ke teen lines delete kr do.
+
+function loco_gsap(){
+    gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true,
+lerp:0.02,
+  // for tablet smooth
+  tablet: { smooth: true },
+
+  // for mobile
+  smartphone: { smooth: true }
+});
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("#main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+
+  // follwoing line is not required to work pinning on touch screen
+
+  /* pinType: document.querySelector(".smooth-scroll").style.transform? "transform"
+    : "fixed"*/
+});
+
+
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+ScrollTrigger.refresh();
+
+}
+
+loco_gsap();
+
 gsap.to('.part-1 img', {
     scale: 1.1,
     duration: 1.9,
@@ -33,8 +81,8 @@ var serviceContainer = document.querySelector('.services-container');
 var clutter1 = '';
 providedServices.forEach(function (elem, index) {
     clutter1 += `
-    <div class="service-offered">
-                <img src=${elem.img} alt="imgage not found">
+    <div  class="service-offered">
+                <img data-scroll data-scroll-speed="-3" src=${elem.img} alt="imgage not found">
                 <h2>${elem.field}</h2>
                 <p>${elem.description}</p>
             </div>
@@ -48,17 +96,23 @@ let splittedText = textTobeSplit.innerHTML.split(' ');
 let clutter2 = '';
 splittedText.forEach(function (val) {
     clutter2 += `
-    <span>${val}</span>
+    <span class="spn">${val}</span>
     `
 })
 textTobeSplit.innerHTML = clutter2;
 
-gsap.to('span', {
-    color: 'blue',
-    duration: 2,
-    delay: 1,
-    stagger: .2,
-
+gsap.to('.spn', {
+    scrollTrigger:{
+        trigger:'.color-filling-text',
+        scroller:'#main',
+        markers:true,
+        start:'start 45%',
+        end:'top -60%',
+        scrub:2,
+    },
+    color: '#F9EEDB',
+    stagger:5,
+    opacity:1,
 })
 
 let newsHypeCont = document.querySelector('.news-hype-container')
@@ -92,6 +146,7 @@ hypeNews.forEach(function (val) {
     `
 })
 newsHypeCont.innerHTML = clutter3;
+
 
 let comp = document.querySelector('.clients');
 let compList = ['https://renystudio.com/wp-content/uploads/2023/04/1-2.png', 'https://renystudio.com/wp-content/uploads/2023/04/2-2.png', 'https://renystudio.com/wp-content/uploads/2023/04/3-3.png', 'https://renystudio.com/wp-content/uploads/2023/04/8.png', 'https://renystudio.com/wp-content/uploads/2023/04/6.png', 'https://renystudio.com/wp-content/uploads/2023/04/7.png', 'https://renystudio.com/wp-content/uploads/2023/04/13.png', 'https://renystudio.com/wp-content/uploads/2023/04/15.png', 'https://renystudio.com/wp-content/uploads/2023/04/16.png', 'https://renystudio.com/wp-content/uploads/2023/04/16.png', 'https://renystudio.com/wp-content/uploads/2023/04/17.png', 'https://renystudio.com/wp-content/uploads/2023/04/9.png',]

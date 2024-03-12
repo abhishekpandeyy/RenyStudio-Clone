@@ -11,13 +11,15 @@ body {
   width: 100%;
 }
 @media (max-width: 600px) {
-  .part-1 h1 {
-    font-size: 1rem;
+  .part-1 h1{
+    font-size: 8vw !important;
+    background-color: rebeccapurple;
   }
 }
 #main {
   padding: 2vw;
   width: 100%;
+  background-color: #20201F;
 }
 .part-1 {
   width: 100%;
@@ -36,9 +38,9 @@ body {
 }
 .part-1 h1 {
   position: absolute;
-  top: 40%;
-  width: 67%;
-  font-size: 6rem;
+  top: 30%;
+  width: 70%;
+  font-size: 10vw;
   line-height: 0.85;
   color: #f9eedb;
   z-index: 1;
@@ -83,8 +85,10 @@ body {
   margin: auto;
 }
 .services {
-  height: 200vh;
+  min-height: 200vh;
   width: 100%;
+  padding: 5vw 1vw;
+  border: none;
 }
 .services-container {
   display: flex;
@@ -92,11 +96,12 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2vw;
+  
 }
 .service-offered {
-  height: 100vh;
+  height: 50vw;
   width: 30vw;
-  border-radius: 2rem;
+  border-radius: .9rem;
   overflow: hidden;
 }
 .service-offered img {
@@ -105,74 +110,170 @@ body {
   object-fit: cover;
 }
 .color-filling-text {
-  height: auto;
+  max-height: 200vh;
   width: 100%;
   color: #f9eedb;
   padding-top: 8vw;
   padding: 3vw;
+  border: none;
+  overflow: hidden;
+  display: flex;align-items: start;justify-content: center;
+}
+#movingImg{
+  margin-top: 35%;
+  transition: all linear 1s;
 }
 .color-filling-text h3 {
   font-size: 5vw;
-  width: 70%;
+  width: 80%;
   text-align: start;
-  margin-left: 30%;
+  margin-left: 20%;
+  color: #4B4945;
 }
-span {
+.color-filling-text img{
+  height: 10vh;
+  
+}
+.spn {
   display: inline-block;
+  opacity: 0.5;
+  transition: all ease .3s;
 }
 .news-hype {
-  height: 300vh;
+  min-height: 300vh;
   width: 100%;
-  background-color: lightseagreen;
+  color: white;
+
 }
+.nav-news-hype
+{
+  height: 13vh;
+  width: 100%;
+  display: flex;align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
 .clients {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.clients img {
-  height: 14rem;
-  width: 14rem;
-}
-.news-hype-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2vw;
+  width: 100%;
+  max-height: 100vw;
+  padding: 2vw;
+  
+}
+.comp-container{
+  height: 8rem;
+  width: 14rem;
+ 
+}
+.comp-container img {
+  width: 14rem;
+}
+.news-hype-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3vw;
   overflow: hidden;
+  height: auto;
+  width: 100%;
+ 
+ 
 }
 
 .news-hype-content img {
   object-fit: cover;
   height: 18rem;
   width: 18rem;
+  transition: all ease .5s;
+}
+.news-hype-content img:hover{
+  transform-origin: center;  
+  scale: 1.25;
 }
 .news-hype-content {
-  height: 30vw;
-  width: 30vw;
-  border-radius: 2rem;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
 }
+.news-hype-content h1{
+  font-size: 1.2rem;
+  position: absolute;
+ width: 80%;
+  top: 50%;
+  text-align: start;
+  padding: 1vw;
+  pointer-events: none;
+}
+
 .wall-of-quote {
-  height: 300vh;
+  /* margin-top: 5vw; */
+  max-height: 150vh;
   width: 100%;
+  /* padding: 4vw 0; */
+  overflow: hidden;
+ background-color: crimson;
+}
+.text{
+  min-height: 90vh;
+  width: 100%;
+  /* padding: 8vw 0; */
+  /* background-color: pink; */
+ 
 }
 .wall-of-quote img {
   width: 100%;
+  object-fit: cover;
+  scale: 1.3;
 }
-.wall-of-quote h1 {
-  font-size: 8.3rem;
-  line-height: 0.8;
+.text{
+  /* text-align: start; */
+  font-size: 8.2rem;
+  line-height: 0.9;
+  color: #f9eedb;
+}
+.changingTextDiv{
+  height: 100vh;
+  width: 100%;
+  background-color: burlywood;
 }
 .work-with-us {
   height: 200vh;
   width: 100%;
   background-color: lightgray;
 }
+.imgWWU{
+  height: 140vh;
+  overflow: hidden;
+  position: relative;
+}
 .work-with-us img {
   width: 100%;
+  object-fit: cover;
+  scale: 1.2;
 }
+#button-wrap{
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+ #button-wrap h1{
+  text-align: center;
+  font-size: 1.2rem;
+ }
+ #button-wrap button{
+  padding: .8rem 2rem;
+  background-color: #f9eedb;
+  color: black;
+ }
 
 .certifications {
   display: flex;
@@ -183,17 +284,24 @@ span {
 .certifications img {
   height: 8rem;
 }
+.impact{
+  height: 200vh;
+  background-color: crimson;
+  width: 100%;
+}
 .wrap-div-of-pages{
     height: 100vh;
     width: 100%;
     background-color: gray;
 }
 .footer {
+  height: 100vh;
   border-top: 3px solid #f9eedb;
   border-bottom: 3px solid #f9eedb;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: lightgreen;
 }
 
 .footer img {
