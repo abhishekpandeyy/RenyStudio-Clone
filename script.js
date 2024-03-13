@@ -159,4 +159,15 @@ compList.forEach(function (val) {
 </div>
     `
 })
+gsap.to('.diff-val',{
+    duration:.1,
+})
 comp.innerHTML = clutter4;
+let changingValSpn=document.querySelector('.change-h2');
+const wordArray=[" ","powerfull"," ","sensible"," ","important"," ","valuable"," ","that matters"," ","that changes things"," ","move you"," ","move me"," ","creative"]//n=9.
+let i=0;
+setInterval(function(val){
+    i=(i%9);
+    changingValSpn.innerHTML=wordArray[i];
+    i++;
+},1000)
